@@ -1,4 +1,4 @@
-plot3 <- function() {
+#PLOT3
         #Set working dir with data file:
         setwd("C:/Users/Jonas/Documents/R")
         #Character vector with names of variables:
@@ -20,7 +20,7 @@ plot3 <- function() {
         lines(data$Sub_metering_2,, type="o", pch=26, col="red")
         lines(data$Sub_metering_3,, type="o", pch=26, col="blue")
         axis(1, at=sted, lab=c("Thu","Fri", "Sat"))
-        axis(2, las=1, at=10*0:max_y)
+        axis(2, las=0, at=10*0:max_y)
         box()
         title(ylab= "Energy sub metering") 
         legendnames <- c("Sub_metering_1","Sub_metering_2","Sub_metering_3")
@@ -30,4 +30,3 @@ plot3 <- function() {
         #Close graphics device for writing to PNG-file to save file:
         dev.off()     
         
-}

@@ -1,4 +1,4 @@
-plot2 <- function() {
+#PLOT2
         #Set working dir with data file:
         setwd("C:/Users/Jonas/Documents/R")
         #Character vector with names of variables:
@@ -16,10 +16,9 @@ plot2 <- function() {
         plot(1:2880, data$Global_active_power, ylab="Global Active Power (kilowatts)", type="o", axes=FALSE, ann=FALSE, xlim=c(0,2881),pch = 26)
         sted <- c(1, 1441,2881)
         axis(1, at=sted, lab=c("Thu","Fri", "Sat"))
-        axis(2, las=1, at=2*0:max(data$Global_active_power))
+        axis(2, las=0, at=2*0:max(data$Global_active_power))
         box()
         title(ylab= "Global Active Power (kilowatts)")
         #Close graphics device for writing to PNG-file to save file:
         dev.off()     
        
-}

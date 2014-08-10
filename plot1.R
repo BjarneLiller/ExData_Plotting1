@@ -1,4 +1,5 @@
-plot1 <- function() {
+#PLOT1
+
         #Set working dir with data file:
         setwd("C:/Users/Jonas/Documents/R")
         #Character vector with names of variables:
@@ -11,4 +12,3 @@ plot1 <- function() {
         hist(data$Global_active_power, col ="red", main = "Global Active Power", xlab="Global Active Power (kilowatts)")
         #Close graphics device for writing to PNG-file to save file:
         dev.off()
-}
