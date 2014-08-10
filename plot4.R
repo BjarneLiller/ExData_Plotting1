@@ -50,8 +50,8 @@
 
         plot(1:2880, data$Voltage, ylab="Voltage", type="o", axes=FALSE, ann=FALSE, xlim=c(0,2881),pch = 26)
         sted <- c(1, 1441,2881)
-        axis(1, at=sted, lab=c("Thu","Fri", "Sat"))
         
+        axis(1, at=sted, lab=c("Thu","Fri", "Sat"))
         axis(2, at=2*0:max(data$Voltage), label=F, tick=T)
         axis(2, las=0, at=seq(0,max(data$Voltage),4)+2)
         
@@ -64,17 +64,8 @@
         plot(1:2880, data$Global_reactive_power, ylab="Global_reactive_power", type="o", axes=FALSE, ann=FALSE, xlim=c(0,2881),pch = 26)
         sted <- c(1, 1441,2881)
         
-        
         axis(1, at=sted, lab=c("Thu","Fri", "Sat"))
-        
-        
-        #axis(2, at=2*0:max(data$Voltage), label=F, tick=T)
         axis(2, las=0, at=seq(0,max(data$Global_reactive_power),0.1))
-        
-        #axis(2, las=0, at=0.1*0:max(data$Global_reactive_power))
-        
-        #axis(2, at=2*0:max(data$Voltage), label=F, tick=T)
-        #axis(2, las=0, at=seq(0,max(data$Voltage),4)+2)
         
         box()
         title(ylab= "Global_reactive_power")
